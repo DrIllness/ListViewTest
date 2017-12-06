@@ -14,10 +14,11 @@ import java.util.ArrayList;
  * Created by drillness on 05.12.17.
  */
 
-public class ListEntryAdapter extends BaseAdapter {
-    private ArrayList<ListEntry> listEntryArrayList;
+public class ImageEntryAdapter extends BaseAdapter {
+    private ArrayList<ImageEntry> imageList;
 
-    private Integer[] imgid = {R.drawable.cleaner,
+    private Integer[] imageId = {
+            R.drawable.cleaner,
             R.drawable.defeatist,
             R.drawable.flumber,
             R.drawable.humanist,
@@ -28,40 +29,39 @@ public class ListEntryAdapter extends BaseAdapter {
             R.drawable.stormtrooper,
             R.drawable.victim
     };
-    private LayoutInflater l_Inflater;
+    private LayoutInflater inflater;
 
-    public ListEntryAdapter(Context context, ArrayList<ListEntry> results) {
-        listEntryArrayList = results;
-        l_Inflater = LayoutInflater.from(context);
+    public ImageEntryAdapter(Context context, ArrayList<ImageEntry> imageList) {
+        this.imageList = imageList;
+        inflater = LayoutInflater.from(context);
     }
     public long getItemId(int position) {
         return position;
     }
     public Object getItem(int position) {
-        return listEntryArrayList.get(position);
+        return imageList.get(position);
     }
     public int getCount() {
-        return this.listEntryArrayList.size();
+        return this.imageList.size();
     }
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = l_Inflater.inflate(R.layout.list_entry_view, null);
+            convertView = inflater.inflate(R.layout.image_entry_view, null);
             holder = new ViewHolder();
-            holder.txt_name = (TextView) convertView.findViewById(R.id.name);
+            holder.name = (TextView) convertView.findViewById(R.id.name);
             holder.image = (ImageView) convertView.findViewById(R.id.image);
-
             convertView.setTag(holder);
-        }else {
+        } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.image.setImageResource(imgid[listEntryArrayList.get(position).getImgId() - 1]);
-        holder.txt_name.setText(listEntryArrayList.get(position).getName());
+        holder.image.setImageResource(imageId[imageList.get(position).getImageId() - 1]);
+        holder.name.setText(imageList.get(position).getName());
         return convertView;
     }
 
     static class ViewHolder {
-        TextView txt_name;
+        TextView name;
         ImageView image;
     }
 }

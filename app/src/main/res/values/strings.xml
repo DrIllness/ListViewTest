@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TestTask</string>
+    <string name="cleaner">Cleaner</string>
+    <string name="defeatist">Defeatist</string>
+    <string name="flumber">Flumber</string>
+    <string name="humanist">Humanist</string>
+    <string name="invulnerable">Invulnerable</string>
+    <string name="irrepressible">Irrepressible</string>
+    <string name="sloth">Sloth</string>
+    <string name="sniper">Sniper</string>
+    <string name="stormtrooper">Stormtrooper</string>
+    <string name="victim">Victim</string>
 </resources>

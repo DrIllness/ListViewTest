@@ -13,66 +13,66 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<ListEntry> image_details = getSearchResults();
+        ArrayList<ImageEntry> imageList = createImageList();
 
-        final ListView lv1 = (ListView) findViewById(R.id.listV_main);
-        lv1.setAdapter(new ListEntryAdapter(this, image_details));
-
+        final ListView listView = (ListView) findViewById(R.id.list_view);
+        listView.setAdapter(new ImageEntryAdapter(this, imageList));
     }
 
-    private ArrayList<ListEntry> getSearchResults() {
-        ArrayList<ListEntry> results = new ArrayList<>();
+    private ArrayList<ImageEntry> createImageList() {
+        ArrayList<ImageEntry> imageList = new ArrayList<>();
+        int index = 0;
 
-        ListEntry list_entry = new ListEntry();
-        list_entry.setName("Cleaner");
-        list_entry.setImgId(1);
-        results.add(list_entry);
+        ImageEntry imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.cleaner));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Defeatist");
-        list_entry.setImgId(2);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.defeatist));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Flumber");
-        list_entry.setImgId(3);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.flumber));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Humanist");
-        list_entry.setImgId(4);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.humanist));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Invulnerable");
-        list_entry.setImgId(5);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.invulnerable));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Irresponsible");
-        list_entry.setImgId(6);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.irrepressible));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Sloth");
-        list_entry.setImgId(7);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.sloth));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Sniper");
-        list_entry.setImgId(8);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.sniper));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Stormtrooper");
-        list_entry.setImgId(9);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.stormtrooper));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        list_entry = new ListEntry();
-        list_entry.setName("Victim");
-        list_entry.setImgId(10);
-        results.add(list_entry);
+        imageEntry = new ImageEntry();
+        imageEntry.setName(getString(R.string.victim));
+        imageEntry.setImageId(++index);
+        imageList.add(imageEntry);
 
-        return results;
+        return imageList;
     }
 }
