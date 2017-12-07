@@ -3,7 +3,6 @@ package com.example.drillness.testtask;
 /**
  * Created by drillness on 05.12.17.
  */
-
 public class ImageEntry {
     private String name;
     private int imageId;

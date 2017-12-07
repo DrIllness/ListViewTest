@@ -17,18 +17,6 @@ import java.util.ArrayList;
 public class ImageEntryAdapter extends BaseAdapter {
     private ArrayList<ImageEntry> imageList;
 
-    private Integer[] imageId = {
-            R.drawable.cleaner,
-            R.drawable.defeatist,
-            R.drawable.flumber,
-            R.drawable.humanist,
-            R.drawable.invulnerable,
-            R.drawable.irrepressible,
-            R.drawable.sloth,
-            R.drawable.sniper,
-            R.drawable.stormtrooper,
-            R.drawable.victim
-    };
     private LayoutInflater inflater;
 
     public ImageEntryAdapter(Context context, ArrayList<ImageEntry> imageList) {
@@ -55,7 +43,7 @@ public class ImageEntryAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.image.setImageResource(imageId[imageList.get(position).getImageId() - 1]);
+        holder.image.setImageResource(imageList.get(position).getImageId());
         holder.name.setText(imageList.get(position).getName());
         return convertView;
     }

@@ -25,52 +25,52 @@ public class MainActivity extends Activity {
 
         ImageEntry imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.cleaner));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.cleaner);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.defeatist));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.defeatist);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.flumber));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.flumber);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.humanist));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.humanist);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.invulnerable));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.invulnerable);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.irrepressible));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.irrepressible);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.sloth));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.sloth);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.sniper));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.sniper);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.stormtrooper));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.stormtrooper);
         imageList.add(imageEntry);
 
         imageEntry = new ImageEntry();
         imageEntry.setName(getString(R.string.victim));
-        imageEntry.setImageId(++index);
+        imageEntry.setImageId(R.drawable.victim);
         imageList.add(imageEntry);
 
         return imageList;
